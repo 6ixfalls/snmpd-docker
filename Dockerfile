@@ -5,6 +5,7 @@ ENV NET_SNMP_VERSION="5.9.4+dfsg-1.1ubuntu3"
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     net-snmp="${NET_SNMP_VERSION}" \
+    libsnmp-perl="${NET_SNMP_VERSION}" \
     && rm -rf /var/lib/apt/lists/*
 
 RUN mkdir -p /etc/snmp/
